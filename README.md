@@ -39,7 +39,12 @@ This should create you a `claudia.json` and return an API url running your Lambd
 
 With YOUR-API-ID replaced by what claudia gave you, accessing the URL in the browser should give you a random small single-color image:
 
-`curl https://<YOUR-API-ID>.execute-api.eu-west-1.amazonaws.com/latest/color`
+`https://<YOUR-API-ID>.execute-api.eu-west-1.amazonaws.com/latest/color`
 
+You can use the r, g, b query parameters to tweak one or more of the values:
 
+`https://<YOUR-API-ID>.execute-api.eu-west-1.amazonaws.com/latest/color?r=255&g=0&b=255`
 
+## License
+
+MIT
