@@ -4,15 +4,15 @@
   "description": "work through images with amazon sqs & lambda",
   "main": "index.js",
   "dependencies": {
-    "async": "^2.5.0",
-    "aws-sdk": "^2.138.0",
-    "jimp": "^0.2.28",
-    "path": "^0.12.7",
-    "utils": "^0.3.1"
+    "claudia-api-builder": "^2.5.1",
+    "jimp": "^0.2.28"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "claudia": "^2.14.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "create": "claudia create --region eu-west-1 --api-module main",
+    "update": "claudia update"
   },
   "author": "Mike Arvela <mike@arvela.net>",
   "license": "MIT"
