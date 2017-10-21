@@ -1,6 +1,8 @@
 # koloroj
 
-Handle images based on an index with Amazon SQS & Lambda.
+Tests for handling a number of images with Amazon SQS & Lambda.
+
+*koloroj* means "colors" in Esperanto.
 
 ## Synopsis
 
@@ -19,4 +21,25 @@ Handle images based on an index with Amazon SQS & Lambda.
 2. Add the index items into a SQS queue (might be a big number)
 
 3. Process each queue item with a Lambda function that creates an image of it and stores it e.g. in a S3 bucket
+
+## Deploying to AWS Lambda
+
+This project uses [claudia](https://github.com/claudiajs/claudia) which makes this pleasantly straightforward.
+
+Prerequisites:
+- Node 6
+- [aws-cli](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) installed, default credentials configured in ~/.aws.
+
+```
+npm install
+npm run create
+````
+
+This should create you a `claudia.json` and return an API url running your Lambda function.
+
+With YOUR-API-ID replaced by what claudia gave you, accessing the URL in the browser should give you a random small single-color image:
+
+`curl https://<YOUR-API-ID>.execute-api.eu-west-1.amazonaws.com/latest/color`
+
+
 
