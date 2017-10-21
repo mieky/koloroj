@@ -1,0 +1,19 @@
+{
+  "name": "koloroj",
+  "version": "1.0.0",
+  "description": "work through images with amazon sqs & lambda",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^2.5.0",
+    "aws-sdk": "^2.138.0",
+    "jimp": "^0.2.28",
+    "path": "^0.12.7",
+    "utils": "^0.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Arvela <mike@arvela.net>",
+  "license": "MIT"
+}
